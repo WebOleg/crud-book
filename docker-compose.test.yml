@@ -1,0 +1,13 @@
+services:
+  mysql-test:
+    image: mysql:8.0
+    container_name: book_directory_mysql_test
+    environment:
+      MYSQL_DATABASE: book_directory_test
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_USER: laravel_user
+      MYSQL_PASSWORD: laravel_password
+    ports:
+      - "3307:3306"
+    tmpfs:
+      - /var/lib/mysql

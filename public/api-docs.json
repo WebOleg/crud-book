@@ -1,0 +1,71 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Book Directory API",
+    "description": "RESTful API for managing books and authors",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000/api",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/authors": {
+      "get": {
+        "summary": "Get all authors",
+        "description": "Retrieve a list of all authors ordered by last name",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Author"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Author": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "first_name": {
+            "type": "string",
+            "example": "John"
+          },
+          "last_name": {
+            "type": "string",
+            "example": "Doe"
+          },
+          "middle_name": {
+            "type": "string",
+            "nullable": true,
+            "example": "William"
+          },
+          "full_name": {
+            "type": "string",
+            "example": "Doe John William"
+          },
+          "books_count": {
+            "type": "integer",
+            "example": 5
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+.books-container {
+    background: #f8f9fa;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.books-header {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.books-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.book-image {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.book-title {
+    font-weight: 600;
+    color: #495057;
+}
+
+.book-authors {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.book-description {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table th {
+    background-color: #495057;
+    color: white;
+    border: none;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.search-form {
+    max-width: 400px;
+}
+
+.modal-header {
+    background-color: #495057;
+    color: white;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #495057;
+    box-shadow: 0 0 0 0.2rem rgba(73, 80, 87, 0.25);
+}
+
+.btn-primary {
+    background-color: #495057;
+    border-color: #495057;
+}
+
+.btn-primary:hover {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.image-preview {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.form-select[multiple] {
+    height: auto;
+    min-height: 120px;
+}
+
+.form-select[multiple] option {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.form-select[multiple] option:selected {
+    background-color: #495057;
+    color: white;
+}
+
+.authors-select-container {
+    position: relative;
+}
+
+.selected-authors {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    min-height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.selected-author-tag {
+    display: inline-block;
+    background: #495057;
+    color: white;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.selected-author-tag .remove {
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Sorting improvements */
+.sortable {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.sortable:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.sort-indicator {
+    margin-left: 8px;
+    font-size: 0.8em;
+}
+
+.sort-active {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+.sort-priority {
+    background: #ffc107;
+    color: #000;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+}
+
+.sorting-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+}
+
+.sort-item {
+    display: inline-flex;
+    align-items: center;
+    background: #495057;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    font-size: 0.875rem;
+}
+
+.sort-item .sort-number {
+    background: #ffc107;
+    color: #000;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.sort-remove {
+    margin-left: 6px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.sort-remove:hover {
+    opacity: 1;
+    color: #ff6b6b;
+}
